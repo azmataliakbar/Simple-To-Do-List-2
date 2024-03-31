@@ -3,6 +3,16 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
 
+console.log(chalk.yellowBright.italic.bold.underline("\n🟠🟢🔵  Welcome to the TODO List 🔵🟢🟠\n"));
+
+const currentDateTime = new Date();
+const currentDate = currentDateTime.toLocaleDateString();
+const currentTime = currentDateTime.toLocaleTimeString();
+
+console.log(chalk.rgb(65, 179, 247)(`\nDate: ${currentDate} & Time: ${currentTime}`));
+console.log();
+
+
 let todos:any = [];
 
 async function main() {
@@ -13,7 +23,7 @@ async function main() {
       {
         name: "selectMenu",
         type: "list",
-        message: chalk.yellowBright.italic.bold.underline("\nSelect an option for ToDoList"),
+        message: chalk.italic.bold.underline.rgb(228, 142, 88)("\nSelect an option for ToDoList"),
         choices: ["Add Task in ToDoList", "Edit Task in ToDoList", "Delete Task in ToDoList", "Mark Completed Task in ToDoList"]
       }
     ]);
@@ -41,7 +51,7 @@ async function main() {
           {
             name: "newTask",
             type: "input",
-            message: chalk.yellowBright.italic.bold.underline("\nEnter the new task: ")
+            message: chalk.rgb(219, 173, 114).italic.bold.underline("\nEnter the new task: ")
           }
         ]);
         todos[editIndex.index] = editIndex.newTask;
@@ -74,18 +84,22 @@ async function main() {
       {
         name: "continue",
         type: "confirm",
-        message: chalk.magentaBright.italic.bold.underline("\nDo you want to perform another action? ")
+        message: chalk.rgb(45, 100, 245).italic.bold.underline("\nDo you want to perform another action? ")
       }
     ]);
 
     condition = addMore.continue;
   }
 
-  console.log(chalk.redBright.italic.bold.underline("\nTo Do List:- "));
+  console.log(chalk.italic.bold.underline.rgb(255, 255, 255)("\nTo Do List:- "));
   console.log(todos);
+  console.log(chalk.italic.bold.underline.rgb(247, 139, 209)("\nThank you for using TODO List, Use Daily."));
 }
 
 main();
+
+
+
 
 
 
