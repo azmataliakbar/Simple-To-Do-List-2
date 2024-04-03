@@ -51,10 +51,10 @@ async function main() {
           {
             name: "newTask",
             type: "input",
-            message: chalk.rgb(219, 173, 114).italic.bold.underline("\nEnter the new task: ")
+            message: chalk.rgb(136, 78, 160).italic.bold.underline("\nEnter the new task: ")
           }
         ]);
-        todos[editIndex.index] = editIndex.newTask;
+        todos[editIndex.index -1, 1] = editIndex.newTask;
         break;
 
       case "Delete Task in ToDoList":
