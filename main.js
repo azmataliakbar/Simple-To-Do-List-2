@@ -43,7 +43,7 @@ async function main() {
                         message: chalk.rgb(136, 78, 160).italic.bold.underline("\nEnter the new task: ")
                     }
                 ]);
-                todos[editIndex.index - 1, 1] = editIndex.newTask;
+                todos[editIndex.index - 1] = editIndex.newTask;
                 break;
             case "Delete Task in ToDoList":
                 let deleteIndex = await inquirer.prompt([
