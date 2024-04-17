@@ -1,5 +1,7 @@
-# This is a To-D0-List-2.
+# Simple-To-Do-List-2
 <br>
-# Author: Azmat Ali
+This is a Simple To-Do-List.
 <br>
-# Project: 4.0
+Author : Azmat Ali
+<br>
+Project : 5.0
